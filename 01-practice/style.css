@@ -1,0 +1,313 @@
+/* =====================
+   RESET / BASE STYLES
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #e2e2e2, #f9f9f9);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px; /* space for fixed header */
+}
+
+input {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font: inherit;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0072e4;
+  box-shadow: 0 0 5px rgba(0, 114, 228, 0.5);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =====================
+   KEYFRAMES
+===================== */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(15px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 80px;
+  background: #0b0d10;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 80px;
+  opacity: 0.95;
+}
+
+.logo > span {
+  font-weight: 400;
+  font-style: italic;
+  color: #0072e4;
+}
+
+/* =====================
+   WRAPPER / LAYOUT
+===================== */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* =====================
+   APP CARD
+===================== */
+.app {
+  background: #ffffff;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* =====================
+   TOP BALANCE
+===================== */
+.top {
+  background: #f7f9fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.first-heading {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.balance-number {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0b0d10;
+}
+
+.balance-number--special {
+  color: red;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+/* =====================
+   OVERVIEW SECTION
+===================== */
+.overview {
+  width: 90%;
+  margin: 20px auto 0;
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  transition: background 0.3s;
+}
+
+.section:hover {
+  background: #f1f7ff;
+}
+
+.section:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.second-heading {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.number {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.number--income {
+  color: #28a745;
+}
+
+.number--expenses {
+  color: #dc3545;
+}
+
+/* =====================
+   FORM
+===================== */
+.form {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background-color: #0072e4;
+  color: #fff;
+  padding: 12px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 100%;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
+}
+
+/* =====================
+   TRANSACTIONS
+===================== */
+.transactions-section {
+  width: 280px;
+}
+
+.third-heading {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transaction {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fade-in 0.3s;
+  cursor: pointer;
+}
+
+.transaction:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.transaction--income {
+  border-left: 5px solid #28a745;
+}
+
+.transaction--expense {
+  border-left: 5px solid #dc3545;
+}
+
+.transaction__amount {
+  margin-left: auto;
+  font-weight: 600;
+}
+
+.transaction__btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: #dc3545;
+  color: #fff;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.transaction:hover .transaction__btn {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
