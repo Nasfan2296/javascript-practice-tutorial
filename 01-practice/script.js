@@ -47,6 +47,7 @@ function addTransaction(e) {
   form.reset();
 }
 
+
 // Add transaction to DOM
 function addTransactionDOM(transaction) {
   const typeClass = transaction.amount > 0 ? "transaction--income" : "transaction--expense";
